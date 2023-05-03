@@ -2,21 +2,78 @@ package fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.bshop1.CartAdapter;
 import com.example.bshop1.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Model.ItemCart;
 
 
 public class cart extends Fragment {
-
+    RecyclerView rccv;
+    private FirebaseAuth mAuth;
+    CartAdapter cartAdapter;
+    List<ItemCart> itemCartList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cart, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        itemCartList = new ArrayList<>();
+        mAuth = FirebaseAuth.getInstance();
+        cartAdapter = new CartAdapter(itemCartList);
+        String idUser = mAuth.getUid();
+        if(idUser == null){
+            Toast.makeText(getContext(), "null", Toast.LENGTH_SHORT).show();
+        }
+        setData(idUser);
+        rccv = view.findViewById(R.id.rccv);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false);
+        rccv.setLayoutManager(linearLayoutManager);
+        rccv.setAdapter(cartAdapter);
+
+    }
+    public void setData(String id){
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("list_cart/"+id);
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                itemCartList.clear();
+                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                    ItemCart itemCart = postSnapshot.getValue(ItemCart.class);
+                    itemCart.setId(postSnapshot.getKey());
+                    itemCartList.add(itemCart);
+                }
+                cartAdapter.notifyDataSetChanged();
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getContext(), databaseError.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

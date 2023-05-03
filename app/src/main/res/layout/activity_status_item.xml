@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/xanh_bien"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatusItem">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mu"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+        <TableLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:text="Tên "/>
+                <TextView
+                    android:id="@+id/tvName6"
+                    android:textColor="#F44336"
+                    android:textSize="30sp"
+                    android:text="Áo Teelab "/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:text="SL"/>
+                <TextView
+                    android:id="@+id/tvSl6"
+                    android:textColor="#F44336"
+                    android:textSize="30sp"
+                    android:text="10"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:text="Số Tiền"/>
+                <TextView
+                    android:id="@+id/tvMoney6"
+                    android:textColor="#F44336"
+                    android:textSize="30sp"
+                    android:text="100k"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:text="Ngày Đặt  "/>
+                <TextView
+                    android:id="@+id/tvDate6"
+                    android:textColor="#F44336"
+                    android:textSize="30sp"
+                    android:text="10/01/2004"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:text="Trạng Thái  "/>
+                <TextView
+                    android:id="@+id/tvStatus6"
+                    android:textColor="#F44336"
+                    android:textSize="30sp"
+                    android:text="Chuẩn Bị Hàng"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:stretchColumns="*"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <Button
+                    android:layout_marginHorizontal="30dp"
+                    android:textSize="25sp"
+                    android:background="@color/white"
+                    android:textColor="@color/xanh_bien"
+                    android:text="Hủy"
+                    android:textAllCaps="false"
+                    android:id="@+id/btnHuy6"/>
+                <Button
+                    android:layout_marginHorizontal="30dp"
+                    android:textSize="25sp"
+                    android:background="@color/white"
+                    android:textColor="@color/xanh_bien"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:id="@+id/btnBack6"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

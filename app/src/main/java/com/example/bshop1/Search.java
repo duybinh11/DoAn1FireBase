@@ -14,13 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import Model.Item;
 
 public class Search extends AppCompatActivity {
     SearchView searchView;
     RecyclerView rccvSearch;
     NewAdapter adapter;
-    List<Item> itemList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,29 +42,28 @@ public class Search extends AppCompatActivity {
     public void anhXa(){
         searchView = findViewById(R.id.searchView);
         rccvSearch = findViewById(R.id.rccvSearch);
-        itemList = new ArrayList<>();
 
     }
     public void initRccvSearch(){
-        itemList.add(new Item(1 ,"Clother",R.drawable.clother));
-        itemList.add(new Item(2,"Banh",R.drawable.food));
-        itemList.add(new Item(1 ,"Ao",R.drawable.clother));
-        itemList.add(new Item(2,"Ao khoac",R.drawable.food));
-        itemList.add(new Item(1 ,"Com ga",R.drawable.clother));
-        itemList.add(new Item(2,"com chien",R.drawable.food));
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
-        adapter = new NewAdapter(itemList);
-        rccvSearch.setLayoutManager(linearLayoutManager);
-        rccvSearch.setAdapter(adapter);
+//        itemList.add(new Item(1 ,"Clother",R.drawable.clother));
+//        itemList.add(new Item(2,"Banh",R.drawable.food));
+//        itemList.add(new Item(1 ,"Ao",R.drawable.clother));
+//        itemList.add(new Item(2,"Ao khoac",R.drawable.food));
+//        itemList.add(new Item(1 ,"Com ga",R.drawable.clother));
+//        itemList.add(new Item(2,"com chien",R.drawable.food));
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
+//        adapter = new NewAdapter(itemList);
+//        rccvSearch.setLayoutManager(linearLayoutManager);
+//        rccvSearch.setAdapter(adapter);
     }
     public void filterList(String data){
-        List<Item> list = new ArrayList<>();
-        for(Item item : itemList){
-            if(item.getName().toLowerCase().contains(data)){
-                list.add(item);
-            }
-        }
-        adapter.setFilterList(list);
+//        List<Item> list = new ArrayList<>();
+//        for(Item item : itemList){
+//            if(item.getName().toLowerCase().contains(data)){
+//                list.add(item);
+//            }
+//        }
+//        adapter.setFilterList(list);
 
     }
 }

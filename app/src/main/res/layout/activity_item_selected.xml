@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemSelected">
+    <ImageView
+        android:id="@+id/img1"
+        android:src="@drawable/mu"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <TableLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:text="Tên SP   "/>
+            <TextView
+                android:id="@+id/tvName"
+                android:textSize="30sp"
+                android:text="Số Lượng "/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:text="Số Lượng   "/>
+            <TextView
+                android:id="@+id/tvSL"
+                android:textSize="30sp"
+                android:text="Số Lượng "/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:text="Đã Bán "/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvSold"
+                android:textSize="30sp"
+                android:text="Số Lượng "/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:text="Giá Bán "/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvCost"
+                android:textSize="30sp"
+                android:text="Số Lượng "/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:text="Ngày Bán "/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvDate"
+                android:textSize="30sp"
+                android:text="Số Lượng "/>
+        </TableRow>
+    </TableLayout>
+    <EditText
+        android:id="@+id/edtSLM"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:hint="Số Lượng Mua"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TableLayout
+        android:layout_marginTop="20dp"
+        android:stretchColumns="*"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <Button
+                android:layout_marginHorizontal="35dp"
+                android:textSize="30sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@color/xanh_bien"
+                android:text="Mua"
+                android:id="@+id/btnMua"/>
+            <Button
+                android:layout_marginHorizontal="35dp"
+                android:textSize="30sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@color/xanh_bien"
+                android:text="Trở Lại"
+                android:id="@+id/btnCannel"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

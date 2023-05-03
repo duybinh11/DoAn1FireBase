@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "969938247082",
+    "project_id": "bshop-867a8",
+    "storage_bucket": "bshop-867a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969938247082:android:cb974bcc53cab40ed95fd3",
+        "android_client_info": {
+          "package_name": "com.example.bfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969938247082-rdm1b7bgbefr3nfbogud5i77bq49sgmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzjmEvdnsNaYSOihrkPkX8kK4xJaDXfpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969938247082-rdm1b7bgbefr3nfbogud5i77bq49sgmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969938247082:android:685d1c7905559bb9d95fd3",
+        "android_client_info": {
+          "package_name": "com.example.bshop1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969938247082-rdm1b7bgbefr3nfbogud5i77bq49sgmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzjmEvdnsNaYSOihrkPkX8kK4xJaDXfpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969938247082-rdm1b7bgbefr3nfbogud5i77bq49sgmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
